@@ -30,12 +30,12 @@ body {
   color: var(--text-color);
   background-color: var(--light-color);
   position: relative;
-  padding-top: 120px; /* Account for fixed header height */
+  padding-top: 60px; /* Reduced padding for smaller header */
 }
 
 .logo-top-left {
   position: fixed;
-  top: 120px;
+  top: 50px;
   left: 20px;
   z-index: 998;
   transition: transform 0.3s ease-in-out;
@@ -61,7 +61,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 999;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -93,6 +93,11 @@ header nav ul li a:hover {
   text-decoration: underline;
 }
 
+/* Desktop navigation */
+.desktop-nav {
+  display: flex;
+}
+
 .language-toggle {
   background-color: var(--primary-color);
   color: var(--white);
@@ -113,7 +118,7 @@ header nav ul li a:hover {
 
 /* Hero section */
 .hero {
-  background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(44, 62, 80, 0.9)), 
+  background: linear-gradient(rgba(248, 187, 43, 0.85), rgba(95, 106, 117, 0.9)), 
               url('https://images.unsplash.com/photo-1478737270239-2f02b77fc618?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80');
   background-size: cover;
   background-position: center;
@@ -427,37 +432,45 @@ footer p {
 /* Responsive design */
 @media (max-width: 768px) {
   .container {
-    padding: 0 15px;
+    padding: 0 10px;
+  }
+  
+  header {
+    padding: 0.2rem 0;
   }
   
   header h1 {
-    font-size: 1.8rem;
+    font-size: 1.1rem;
+  }
+  
+  header p {
+    font-size: 0.65rem;
   }
   
   .hero h2 {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
   }
   
   section {
-    padding: 2.5rem 0;
+    padding: 1.5rem 0;
   }
   
   section h2 {
-    font-size: 1.7rem;
+    font-size: 1.2rem;
   }
   
   .video-grid, .guest-grid, .stories-grid, .contact-content {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 1rem;
   }
   
   .card {
-    padding: 1.5rem;
+    padding: 0.8rem;
   }
   
   .quote {
-    padding: 1.5rem;
-    font-size: 1.1rem;
+    padding: 0.8rem;
+    font-size: 0.8rem;
   }
   
   .tabs {
@@ -467,16 +480,45 @@ footer p {
   
   .btn {
     width: 100%;
-    padding: 1rem;
+    padding: 0.7rem;
+    font-size: 0.8rem;
+  }
+  
+  /* Hide desktop navigation on mobile */
+  .desktop-nav {
+    display: none;
+  }
+  
+  /* Show hamburger menu on mobile */
+  .hamburger-menu {
+    display: flex !important;
   }
   
   header nav ul {
     flex-direction: column;
     align-items: flex-end;
-    gap: 10px;
+    gap: 4px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header nav ul li a {
+    font-size: 0.7rem;
+    padding: 1px 0;
+  }
+  
+  .language-toggle {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.65rem;
   }
   
   .logo-top-left {
-    top: 140px;
+    top: 30px;
+    left: 8px;
+  }
+  
+  .logo-top-left img {
+    max-width: 20%;
+    height: auto;
   }
 }
