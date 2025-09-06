@@ -257,9 +257,7 @@ const Header = () => {
                     display: 'block',
                     padding: '8px 0'
                   }}
-                >
-                  {t('home')}
-                </a>
+                />
               </li>
               <li>
                 <a 
@@ -273,9 +271,7 @@ const Header = () => {
                     display: 'block',
                     padding: '8px 0'
                   }}
-                >
-                  {t('podcast')}
-                </a>
+                />
               </li>
               <li>
                 <a 
@@ -289,9 +285,7 @@ const Header = () => {
                     display: 'block',
                     padding: '8px 0'
                   }}
-                >
-                  {t('videos')}
-                </a>
+                />
               </li>
               <li>
                 <a 
@@ -305,9 +299,7 @@ const Header = () => {
                     display: 'block',
                     padding: '8px 0'
                   }}
-                >
-                  {t('kitchen')}
-                </a>
+                />
               </li>
               <li>
                 <a 
@@ -321,9 +313,7 @@ const Header = () => {
                     display: 'block',
                     padding: '8px 0'
                   }}
-                >
-                  {t('stories')}
-                </a>
+                />
               </li>
               <li>
                 <a 
@@ -337,9 +327,7 @@ const Header = () => {
                     display: 'block',
                     padding: '8px 0'
                   }}
-                >
-                  {t('contact')}
-                </a>
+                />
               </li>
               {/* Language toggle in mobile menu */}
               <li>

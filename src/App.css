@@ -34,7 +34,6 @@ body {
 }
 
 .logo-top-left {
-  position: fixed;
   top: 70px;
   left: 20px;
   z-index: 998;
@@ -518,33 +517,8 @@ footer p {
     padding: 0.25rem 0.5rem;
     font-size: 0.65rem;
   }
-  
-  .logo-top-left {
-    top: 60px;
-    left: 15px;
-    z-index: 1000; /* Increase z-index for better visibility */
-  }
-  
-  .logo-top-left img {
-    max-width: 150px;
-    width: 25vw;
-    height: auto;
-    min-width: 80px; /* Ensure minimum size on mobile */
-  }
 }
 
 /* Extra small devices */
 @media (max-width: 480px) {
-  .logo-top-left {
-    top: 55px;
-    left: 10px;
-    z-index: 1000; /* Ensure visibility on small screens */
-  }
-  
-  .logo-top-left img {
-    max-width: 120px;
-    width: 30vw;
-    height: auto;
-    min-width: 60px; /* Minimum size for very small screens */
-  }
 }
