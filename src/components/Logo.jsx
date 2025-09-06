@@ -13,7 +13,7 @@ const Logo = ({ size = 'large' }) => {
   return (
     <img 
       src={logoImage} 
-      alt="Natali Show Logo" 
+      alt="Natalia Show Logo" 
       style={{
         width: dimensions.width,
         height: dimensions.height,

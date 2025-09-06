@@ -35,10 +35,17 @@ body {
 
 .logo-top-left {
   position: fixed;
-  top: 50px;
+  top: 70px;
   left: 20px;
   z-index: 998;
   transition: transform 0.3s ease-in-out;
+}
+
+.logo-top-left img {
+  max-width: 300px;
+  width: 20vw;
+  height: auto;
+  min-width: 100px; /* Ensure minimum size */
 }
 
 .App {
@@ -513,12 +520,31 @@ footer p {
   }
   
   .logo-top-left {
-    top: 30px;
-    left: 8px;
+    top: 60px;
+    left: 15px;
+    z-index: 1000; /* Increase z-index for better visibility */
   }
   
   .logo-top-left img {
-    max-width: 20%;
+    max-width: 150px;
+    width: 25vw;
     height: auto;
+    min-width: 80px; /* Ensure minimum size on mobile */
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  .logo-top-left {
+    top: 55px;
+    left: 10px;
+    z-index: 1000; /* Ensure visibility on small screens */
+  }
+  
+  .logo-top-left img {
+    max-width: 120px;
+    width: 30vw;
+    height: auto;
+    min-width: 60px; /* Minimum size for very small screens */
   }
 }

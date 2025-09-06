@@ -186,17 +186,6 @@ const Header = () => {
           {/* Hamburger menu for mobile */}
           <div style={{ display: 'flex', alignItems: 'center' }}>
             <button 
-              className="language-toggle" 
-              onClick={toggleLanguage} 
-              style={{ 
-                padding: '0.3rem 0.6rem',
-                fontSize: '0.7rem'
-              }}
-            >
-              {language === 'sr' ? 'DE' : 'SR'}
-            </button>
-            
-            <button 
               onClick={() => setMenuOpen(!menuOpen)}
               style={{
                 display: 'none', // Hidden on desktop
@@ -351,6 +340,21 @@ const Header = () => {
                 >
                   {t('contact')}
                 </a>
+              </li>
+              {/* Language toggle in mobile menu */}
+              <li>
+                <button 
+                  className="language-toggle" 
+                  onClick={() => { toggleLanguage(); setMenuOpen(false); }} 
+                  style={{ 
+                    padding: '0.4rem 0.8rem',
+                    fontSize: '0.8rem',
+                    width: '100%',
+                    marginTop: '10px'
+                  }}
+                >
+                  {language === 'sr' ? 'DE' : 'SR'}
+                </button>
               </li>
             </ul>
           </nav>

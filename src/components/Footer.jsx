@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="site-footer">
       <div className="footer-container">
-        <p>&copy; 2025 Natali Show. {t('rights')}.</p>
+        <p>&copy; 2025 Natalia Show. {t('rights')}.</p>
         <p>{t('heroTitle')}</p>
       </div>
     </footer>

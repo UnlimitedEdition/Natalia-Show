@@ -1,4 +1,4 @@
-# Natali Show
+# Natalia Show
 
 Profesionalni Podcasti & Video Izveštaji
 
