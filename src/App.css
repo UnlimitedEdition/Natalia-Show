@@ -124,8 +124,7 @@ header nav ul li a:hover {
 
 /* Hero section */
 .hero {
-  background: linear-gradient(rgba(248, 187, 43, 0.85), rgba(95, 106, 117, 0.9)), 
-              url('https://images.unsplash.com/photo-1478737270239-2f02b77fc618?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80');
+  background: linear-gradient(rgba(248, 187, 43, 0.85), rgba(95, 106, 117, 0.9));
   background-size: cover;
   background-position: center;
   color: var(--white);
@@ -445,6 +444,10 @@ footer p {
     padding: 0.2rem 0;
   }
   
+  .site-title {
+    display: none;
+  }
+  
   header h1 {
     font-size: 1.1rem;
   }
@@ -516,6 +519,19 @@ footer p {
   .language-toggle {
     padding: 0.25rem 0.5rem;
     font-size: 0.65rem;
+  }
+  
+  .logo-top-left {
+    top: 50px;
+    left: 15px;
+    z-index: 1000;
+  }
+  
+  .logo-top-left img {
+    max-width: 150px;
+    width: 25vw;
+    height: auto;
+    min-width: 80px;
   }
 }
 
