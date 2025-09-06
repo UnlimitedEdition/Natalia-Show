@@ -49,15 +49,20 @@ const Header = () => {
       position: 'fixed',
       top: 0,
       left: 0,
-      width: '100%',
+      right: 0,
       backgroundColor: 'rgba(44, 62, 80, 0.95)',
       backdropFilter: 'blur(10px)',
       zIndex: 999,
       transition: 'transform 0.3s ease-in-out',
       transform: (window.innerWidth > 768 || headerVisible) ? 'translateY(0)' : 'translateY(-100%)',
-      boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)'
+      boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)',
+      boxSizing: 'border-box'
     }}>
-      <div className="container">
+      <div className="container" style={{ 
+        maxWidth: '1200px', 
+        margin: '0 auto', 
+        padding: '0 15px' 
+      }}>
         <div style={{ 
           display: 'flex', 
           justifyContent: 'space-between', 
@@ -70,7 +75,9 @@ const Header = () => {
             fontSize: '1.4rem',
             fontWeight: 'bold',
             display: window.innerWidth <= 768 && !menuOpen ? 'block' : 'none',
-            fontFamily: 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif'
+            fontFamily: 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif',
+            overflow: 'hidden',
+            textOverflow: 'ellipsis'
           }}>
             Natali Show
           </div>
@@ -96,7 +103,8 @@ const Header = () => {
                       fontSize: '0.9rem',
                       padding: '5px 10px',
                       borderRadius: '4px',
-                      transition: 'background-color 0.3s'
+                      transition: 'background-color 0.3s',
+                      whiteSpace: 'nowrap'
                     }}
                     onMouseEnter={(e) => e.target.style.backgroundColor = 'rgba(255, 255, 255, 0.1)'}
                     onMouseLeave={(e) => e.target.style.backgroundColor = 'transparent'}
@@ -115,7 +123,8 @@ const Header = () => {
                       fontSize: '0.9rem',
                       padding: '5px 10px',
                       borderRadius: '4px',
-                      transition: 'background-color 0.3s'
+                      transition: 'background-color 0.3s',
+                      whiteSpace: 'nowrap'
                     }}
                     onMouseEnter={(e) => e.target.style.backgroundColor = 'rgba(255, 255, 255, 0.1)'}
                     onMouseLeave={(e) => e.target.style.backgroundColor = 'transparent'}
@@ -134,7 +143,8 @@ const Header = () => {
                       fontSize: '0.9rem',
                       padding: '5px 10px',
                       borderRadius: '4px',
-                      transition: 'background-color 0.3s'
+                      transition: 'background-color 0.3s',
+                      whiteSpace: 'nowrap'
                     }}
                     onMouseEnter={(e) => e.target.style.backgroundColor = 'rgba(255, 255, 255, 0.1)'}
                     onMouseLeave={(e) => e.target.style.backgroundColor = 'transparent'}
@@ -153,7 +163,8 @@ const Header = () => {
                       fontSize: '0.9rem',
                       padding: '5px 10px',
                       borderRadius: '4px',
-                      transition: 'background-color 0.3s'
+                      transition: 'background-color 0.3s',
+                      whiteSpace: 'nowrap'
                     }}
                     onMouseEnter={(e) => e.target.style.backgroundColor = 'rgba(255, 255, 255, 0.1)'}
                     onMouseLeave={(e) => e.target.style.backgroundColor = 'transparent'}
@@ -172,7 +183,8 @@ const Header = () => {
                       fontSize: '0.9rem',
                       padding: '5px 10px',
                       borderRadius: '4px',
-                      transition: 'background-color 0.3s'
+                      transition: 'background-color 0.3s',
+                      whiteSpace: 'nowrap'
                     }}
                     onMouseEnter={(e) => e.target.style.backgroundColor = 'rgba(255, 255, 255, 0.1)'}
                     onMouseLeave={(e) => e.target.style.backgroundColor = 'transparent'}
@@ -191,7 +203,8 @@ const Header = () => {
                       fontSize: '0.9rem',
                       padding: '5px 10px',
                       borderRadius: '4px',
-                      transition: 'background-color 0.3s'
+                      transition: 'background-color 0.3s',
+                      whiteSpace: 'nowrap'
                     }}
                     onMouseEnter={(e) => e.target.style.backgroundColor = 'rgba(255, 255, 255, 0.1)'}
                     onMouseLeave={(e) => e.target.style.backgroundColor = 'transparent'}
@@ -213,7 +226,8 @@ const Header = () => {
                 borderRadius: '4px',
                 cursor: 'pointer',
                 transition: 'all 0.3s ease',
-                fontWeight: '600'
+                fontWeight: '600',
+                whiteSpace: 'nowrap'
               }}
               onMouseEnter={(e) => {
                 e.target.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
@@ -503,6 +517,25 @@ const Header = () => {
           
           .desktop-nav {
             display: none !important;
+          }
+          
+          header {
+            left: 0;
+            right: 0;
+            width: 100%;
+            max-width: 100vw;
+            overflow-x: hidden;
+          }
+        }
+        
+        @media (max-width: 480px) {
+          .container {
+            padding: 0 10px;
+          }
+          
+          nav ul li a {
+            font-size: 1rem;
+            padding: 10px 12px;
           }
         }
       `}</style>
