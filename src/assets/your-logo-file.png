@@ -1,0 +1,28 @@
+import React from 'react';
+import logoImage from '../assets/your-logo-file.png';
+
+const Logo = ({ size = 'medium' }) => {
+  const sizeMap = {
+    small: { width: '40px', height: '40px' },
+    medium: { width: '60px', height: '60px' },
+    large: { width: '80px', height: '80px' }
+  };
+
+  const dimensions = sizeMap[size] || sizeMap.medium;
+
+  return (
+    <img 
+      src={logoImage} 
+      alt="Natali Show Logo" 
+      style={{
+        width: dimensions.width,
+        height: dimensions.height,
+        objectFit: 'contain',
+        boxShadow: '0 2px 5px rgba(0,0,0,0.2)',
+        borderRadius: '4px'
+      }}
+    />
+  );
+};
+
+export default Logo;

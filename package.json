@@ -1,0 +1,20 @@
+{
+  "name": "podcast-studio",
+  "version": "1.0.0",
+  "description": "Profesionalni Podcasti & Video Izveštaji",
+  "main": "src/main.jsx",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.8.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^3.1.0",
+    "vite": "^4.1.0"
+  }
+}
