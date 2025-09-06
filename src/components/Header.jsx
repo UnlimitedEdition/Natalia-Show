@@ -74,7 +74,7 @@ const Header = () => {
             color: 'white',
             fontSize: '1.4rem',
             fontWeight: 'bold',
-            display: window.innerWidth <= 768 && !menuOpen ? 'block' : 'none',
+            display: window.innerWidth <= 768 ? 'block' : 'none',
             fontFamily: 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif',
             overflow: 'hidden',
             textOverflow: 'ellipsis'
@@ -250,7 +250,7 @@ const Header = () => {
             <button 
               onClick={() => setMenuOpen(!menuOpen)}
               style={{
-                display: 'none', // Hidden on desktop
+                display: window.innerWidth <= 768 ? 'flex' : 'none', // Show on mobile
                 flexDirection: 'column',
                 justifyContent: 'center',
                 alignItems: 'center',
